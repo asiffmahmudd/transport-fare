@@ -31,7 +31,7 @@ const Destination = () => {
         selectedVehicle = vehicleData;
     }
     else{
-        selectedVehicle = vehicleData.filter(data => data.vehicle.toLowerCase() == vehicle);
+        selectedVehicle = vehicleData.filter(data => data.vehicle.toLowerCase() === vehicle);
     }
     
     const handleUserSearch = (e) => {
@@ -40,7 +40,7 @@ const Destination = () => {
         
         setFrom(destinationFrom);
         setTo(destinationTo);
-        let data = selectedVehicle.filter(data => data.from.toLowerCase() == destinationFrom && data.to.toLowerCase() == destinationTo)
+        let data = selectedVehicle.filter(data => data.from.toLowerCase() === destinationFrom && data.to.toLowerCase() === destinationTo)
         if(data.length > 0){
             setFilteredData(data);
         }
@@ -56,7 +56,7 @@ const Destination = () => {
                 <hr/>
                 <div className="row mt-4">
                     {
-                        filteredData.length == 0 && <UserInput handleUserSearch={handleUserSearch}></UserInput>
+                        filteredData.length === 0 && <UserInput handleUserSearch={handleUserSearch}></UserInput>
                     }
                     
                     {
