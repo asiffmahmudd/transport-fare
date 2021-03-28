@@ -8,4 +8,4 @@
   </ul>
 </h2>
 
-<a href=""><h1>See it live</h1></a>
+<a href="https://jovial-beaver-bf6a7a.netlify.app/" target="_blank"><h1>See it live</h1></a>
