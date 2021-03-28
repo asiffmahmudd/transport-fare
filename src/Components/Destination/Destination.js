@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Destination.css';
 import map from '../../img/Map.png';
-
-
 import { useParams } from 'react-router';
-
 import UserInput from '../UserInput/UserInput';
 import SearchResult from '../SearchResult/SearchResult';
 

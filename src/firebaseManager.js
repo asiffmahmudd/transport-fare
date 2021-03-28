@@ -21,8 +21,6 @@ export const handleUserLogin = (socialNetwork) => {
     .then((result) => {
         return result.user;
     }).catch((error) => {
-        console.log("Error:");
-        console.log(error);
         alert(error.message);
     });
 }
@@ -31,8 +29,6 @@ export const handleUserLogout = () => {
     return firebase.auth().signOut().then(() => {
         return {};
     }).catch((error) => {
-        console.log("Error:");
-        console.log(error);
         alert(error.message);
     });
 }
@@ -44,8 +40,6 @@ export const handleEmailSignup = (email, password) =>{
         return user;
     })
     .catch((error) => {
-        console.log("Error:");
-        console.log(error);
         alert(error.message);
     });
 }
