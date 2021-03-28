@@ -8,4 +8,4 @@
   </ul>
 </h2>
 
-<a href=""><h1>See it live</h1></a>
+<a href="youthful-jennings-d1831b.netlify.app" target="_blank"><h1>See it live</h1></a>
