@@ -13,7 +13,10 @@ const UserInput = (props) => {
                         <label>Pick To</label>
                         <input type="text" className="form-control" id="inputTo" placeholder="Pick To" required />
                     </div>
-                    
+                    <div className="form-group">
+                        <label>Date</label>
+                        <input type="date" id="date" name="date "></input>
+                    </div>
                     <button type="submit" className="btn w-100">Search</button>
                 </form>
             </div>

@@ -12,6 +12,11 @@
     width: 100%;
 }
 
+input#date {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-left: 15px;
+}
 
 
 
