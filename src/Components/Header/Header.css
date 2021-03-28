@@ -1,0 +1,21 @@
+a.navbar-brand {
+    font-weight: 800;
+}
+
+a.nav-link {
+    font-weight: 700;
+}
+
+.nav-link{
+    margin-right: 2rem;
+}
+
+.nav-item .btn{
+    background-color: tomato !important;
+    border: none;
+    padding: 0.5rem 2rem;
+}
+
+.nav-item .btn:hover{
+    background-color: rgb(247, 85, 56) !important;
+}

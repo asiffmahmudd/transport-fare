@@ -1,0 +1,19 @@
+.btn{
+    background-color: tomato !important;
+    color: white !important;
+}
+
+.destination .form-container{
+    background-color: rgb(235, 235, 235);
+    padding: 2rem 1rem !important
+}
+
+.destination .map-img img{
+    width: 100%;
+}
+
+
+
+
+
+

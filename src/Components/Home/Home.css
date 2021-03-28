@@ -1,0 +1,22 @@
+ html, body{
+    height: 100%;
+    margin: 0;
+    
+}
+
+.vehicles-row{
+    justify-content: space-around;
+}
+
+.bg-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#root{
+    height: 100%;
+}

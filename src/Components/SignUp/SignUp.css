@@ -1,0 +1,38 @@
+
+.login form input{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+.login form .btn{
+    background-color: tomato;
+    color: white;
+    border-radius: 0;
+}
+
+.login form .btn:hover{
+    background-color: rgb(247, 85, 56) !important;
+}
+
+.login form ::placeholder{
+    font-weight: 700;
+}
+
+.login form .form-control{
+    padding: 0 !important;
+}
+
+.login form .form-control:focus{
+    box-shadow: none !important;
+}
+
+.tomato{
+    color: tomato;
+}
+
+form{
+    padding-bottom: 0 !important;
+}
+

@@ -1,0 +1,15 @@
+.vehicle-container .vehicle-img{
+    width: 100%;
+}
+
+.col-md-2.vehicle-container {
+    padding: 2rem;
+    background: white;
+    border-radius: 5px;
+}
+
+@media (max-width:767px){
+    .home {
+        background: #8cdef4;
+    }
+}

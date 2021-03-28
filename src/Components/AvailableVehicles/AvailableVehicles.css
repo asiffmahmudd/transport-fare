@@ -1,0 +1,72 @@
+
+
+.search-result .vehicle-img{
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.search-result .people-img{
+    height: 20px;
+    margin-left: 1rem;
+    margin-right: 5px;
+}
+
+.search-result-container{
+    padding: 1rem;
+    background-color: rgb(236, 236, 236);
+}
+
+.search-result{
+    background-color: white;
+    padding: 1rem;
+}
+
+.search-result span{
+    font-weight: bold;
+}
+
+
+
+.from-to{
+    background-color: tomato;
+    position: relative;
+}
+
+.from-to .location-names{
+    margin-left: 33px;
+}
+
+.from-to span.line{
+    height: 46px;
+    position: absolute;
+    left: 25px;
+    top: 30px;
+    border-left: 2px solid white;
+}
+
+.from-to p{
+    color: white;
+    font-weight: bold;
+}
+
+.from-to .circle-up, .from-to .circle-down{
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.from-to .circle-up{
+    left: 18.5px;
+    top: 22px;
+    width: 15px;
+    height: 15px;
+}
+
+.from-to .circle-down{
+    left: 18.5px;
+    top: 70px;
+    width: 15px;
+    height: 15px;
+}
+
