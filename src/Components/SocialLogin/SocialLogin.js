@@ -1,28 +1,21 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import facebook from '../../img/facebook.png';
 import google from '../../img/google.png';
 import './SocialLogin.css';
-
-import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
-import { handleUserLogin, initializeLoginFrameWork } from '../../firebaseManager';
-
-initializeLoginFrameWork();
+import { useAuth } from '../../Contexts/AuthContext';
 
 const SocialLogin = () => {
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {handleUserLogin} = useAuth()
     let history = useHistory();
     let location = useLocation();
 
     let { from } = location.state || { from: { pathname: "/" } };
 
-    const handleLogin = (socialNetwork) => {
-        handleUserLogin(socialNetwork)
-        .then(result => {
-            setLoggedInUser(result);
-            history.replace(from);
-        })
+    const handleLogin = async (socialNetwork) => {
+        await handleUserLogin(socialNetwork);
+        history.replace(from);
     }
 
     return (

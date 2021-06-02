@@ -1,18 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
 import './Header.css';
-
-import { handleUserLogout } from '../../firebaseManager';
+import { useAuth } from '../../Contexts/AuthContext';
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {handleUserLogout, loggedInUser}=  useAuth()
 
     const handleLogout = () => {
-        handleUserLogout()
-        .then(result => {
-            setLoggedInUser(result);
-        });
+        handleUserLogout();
     }
 
     
@@ -39,10 +34,10 @@ const Header = () => {
                             <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
                         {
-                            loggedInUser?.displayName &&
+                            loggedInUser?.email &&
                             <>
                                 <li className="nav-item">
-                                    <p className="nav-link font-weight-bold text-dark">{loggedInUser?.displayName}</p>
+                                    <p className="nav-link font-weight-bold text-dark">{loggedInUser?.name}</p>
                                 </li>
                                 <li className="nav-item">
                                     <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
@@ -50,7 +45,7 @@ const Header = () => {
                             </>
                         }
                         {
-                            !loggedInUser?.displayName &&
+                            !loggedInUser?.email &&
                             <li className="nav-item">
                                 <Link className="nav-link" to="/login"><button className="btn btn-primary">Login</button></Link>
                             </li>

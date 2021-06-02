@@ -1,5 +1,5 @@
 import './App.css';
-import React, { createContext, useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,15 +14,11 @@ import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import SignUp from './Components/SignUp/SignUp';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-
-export const UserContext = createContext();
+import { AuthProvider } from './Contexts/AuthContext';
 
 function App() {
-
-  const [loggedInUser, setLoggedInUser] = useState({});
-
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -52,7 +48,7 @@ function App() {
             </Route>
           </Switch>
       </Router>
-    </UserContext.Provider>
+      </AuthProvider>
   );
 }
 

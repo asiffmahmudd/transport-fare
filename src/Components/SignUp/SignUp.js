@@ -1,35 +1,26 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './SignUp.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { handleEmailSignup, updateName } from '../../firebaseManager';
-import { UserContext } from '../../App';
+import { useAuth } from '../../Contexts/AuthContext';
 
 const SignUp = () => {
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {handleEmailSignup, updateName} = useAuth();
 
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
 
-    const handleSignupWithEmail = (e) => {
+    const handleSignupWithEmail = async (e) => {
         e.preventDefault();
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         if(passwordMatch()){
-
-            handleEmailSignup(email,password)
-            .then(user => {
-                if(user){
-                    updateName(name)
-                    .then(data => {
-                        setLoggedInUser(data);        
-                        history.replace(from);
-                    });
-                }
-            });
+            await handleEmailSignup(email,password);
+            await updateName(name)
+            history.replace(from)
         }
         e.preventDefault();
     }
